@@ -28,6 +28,6 @@ async function click(tab) {
     await messenger.compose.setComposeDetails(tab.id, {
         to: composeDetails.to
     });
-    
+
 }
 messenger.composeAction.onClicked.addListener(click);
