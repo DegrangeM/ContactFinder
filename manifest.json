@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Contact Finder",
-    "description": "Autocomplete a list of contact when sending a message by searching their name in the address book.",
+    "description": "Autocomplete a list of contacts when sending a message by searching their name in the address book.",
     "version": "1.0",
     "author": "Mathieu Degrange",
     "applications": {
