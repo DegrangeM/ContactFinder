@@ -10,9 +10,13 @@
             "strict_min_version": "78.0"
         }
     },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
     "compose_action": {
-        "default_popup": "popup.html",
-        "default_title": "Hello World",
+        "default_title": "Contact Finder",
         "default_icon": "images/internet-32px.png"
     },
     "icons": {
