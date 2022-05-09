@@ -7,7 +7,7 @@ async function click(tab) {
         // contact can either be a string (entered by user) or an object (from address book)
         if (typeof dest === 'string') {
             if (!dest.includes('@')) { // Only search recipient which doesn't already have an email address
-                dest = dest.replace('<>', '');
+                dest = dest.replace(/<[^>]*>/, "");
                 const contacts = await messenger.contacts.quickSearch(null, dest);
                 if (contacts.length === 1) {
                     composeDetails.to[k] = {
