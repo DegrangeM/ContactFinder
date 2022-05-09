@@ -12,7 +12,7 @@ You have this spreadsheet and you want to send them an email :
 
 ![image](https://user-images.githubusercontent.com/53106394/167496786-1c5125ef-555b-4c0c-9959-6dfd0a837da3.png)
 
-If you try to copy and paste the three rows to thunderbird you will not be able to send them an email (you need to press tab to validate the paste) :
+If you try to copy and paste the three rows to thunderbird you will not be able to send them an email (you need to **press tab** to validate the paste) :
 
 ![image](https://user-images.githubusercontent.com/53106394/167497089-96c15bec-206c-4eb3-a0e6-dbee27eb6891.png)
 
@@ -47,6 +47,10 @@ Because :
 - It doesn't know if you means Pierre Dupont or Pierre Dubois
 
 - It couldn't find any Sophie in your contact
+
+## Troubleshooting
+
+If it doesn't work, check that you pressed tabs after pasting the recipient. It should have a red background behind each recipient.
 
 ## Licensing
 
