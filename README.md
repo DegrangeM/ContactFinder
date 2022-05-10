@@ -1,6 +1,8 @@
 # ContactFinder
  
-ContactFinder is an extension allowing you to autocomplete a list of contact when sending a message by searching their name in the address book.
+ContactFinder is an add-on allowing you to autocomplete a list of contact when sending a message by searching their name in the address book.
+
+https://addons.thunderbird.net/en-US/thunderbird/addon/contact-finder
 
 ## Usage
 
@@ -18,11 +20,11 @@ If you try to copy and paste the three rows to thunderbird you will not be able 
 
 Thunderbird require an email and not an name to be able to send the email, even if theses are in your contact list.
 
-You can either use autocomplete on **each one** of the recipient, or you can use this extension.
+You can either use autocomplete on **each one** of the recipient, or you can use this add-on.
 
 ![image](https://user-images.githubusercontent.com/53106394/167497566-5d6162fc-13f1-4a7e-87f1-d68093c02348.png)
 
-In one click on the extension button, thunderbird will find contact associated to the name.
+In one click on the add-on button, thunderbird will find contact associated to the name.
 
 ![image](https://user-images.githubusercontent.com/53106394/167497726-e452b40c-f0b7-42cd-8814-ad0381b1f42d.png)
 
