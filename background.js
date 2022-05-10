@@ -2,28 +2,13 @@ async function click(tab) {
 
     await messenger.composeAction.disable(tab.id);
 
-    messenger.composeAction.setBadgeText({ text: '.  ' });
-
-    let animationText = '.  ';
-    let animation = setInterval(async function () {
-        switch (animationText) {
-            case '.  ':
-                animationText = '.. ';
-                break;
-            case '.. ':
-                animationText = '...';
-                break;
-            case '...':
-                animationText = '.  ';
-                break;
-        }
-        messenger.composeAction.setBadgeText({ text: animationText });
-    }, 500);
+    messenger.composeAction.setBadgeText({ text: '...' });
 
     const composeDetails = await messenger.compose.getComposeDetails(tab.id);
 
+
     for (field of ['to', 'cc', 'bcc']) {
-        for (let k = 0; k < composeDetails.to.length; k++) {
+        for (let k = 0; k < composeDetails.to.length; k++, K++) {
             let dest = composeDetails[field][k];
             // contact can either be a string (entered by user) or an object (from address book)
             if (typeof dest === 'string') {
@@ -54,7 +39,6 @@ async function click(tab) {
         bcc: composeDetails.bcc
     });
 
-    clearInterval(animation);
     messenger.composeAction.setBadgeText({ text: null });
     messenger.composeAction.enable(tab.id);
 
