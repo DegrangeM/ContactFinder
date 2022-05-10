@@ -1,5 +1,25 @@
 async function click(tab) {
 
+    await messenger.composeAction.disable(tab.id);
+
+    messenger.composeAction.setBadgeText({ text: '.  ' });
+
+    let animationText = '.  ';
+    let animation = setInterval(async function () {
+        switch (animationText) {
+            case '.  ':
+                animationText = '.. ';
+                break;
+            case '.. ':
+                animationText = '...';
+                break;
+            case '...':
+                animationText = '.  ';
+                break;
+        }
+        messenger.composeAction.setBadgeText({ text: animationText });
+    }, 500);
+
     const composeDetails = await messenger.compose.getComposeDetails(tab.id);
 
     for (field of ['to', 'cc', 'bcc']) {
@@ -33,6 +53,10 @@ async function click(tab) {
         cc: composeDetails.cc,
         bcc: composeDetails.bcc
     });
+
+    clearInterval(animation);
+    messenger.composeAction.setBadgeText({ text: null });
+    messenger.composeAction.enable(tab.id);
 
 }
 messenger.composeAction.onClicked.addListener(click);
