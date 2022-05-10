@@ -6,9 +6,16 @@ async function click(tab) {
 
     const composeDetails = await messenger.compose.getComposeDetails(tab.id);
 
+    let K = 0;
+    let M = composeDetails.to.length + composeDetails.cc.length + composeDetails.bcc.length;    // total number of recipients
+    let progress = '';
 
     for (field of ['to', 'cc', 'bcc']) {
         for (let k = 0; k < composeDetails[field].length; k++, K++) {
+            if(parseInt(K/M * 100) !== progress) {
+                progress = parseInt(K/M * 100);
+                messenger.composeAction.setBadgeText({ text: progress + '%' });
+            }
             let dest = composeDetails[field][k];
             // contact can either be a string (entered by user) or an object (from address book)
             if (typeof dest === 'string') {
