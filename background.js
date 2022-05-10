@@ -8,7 +8,7 @@ async function click(tab) {
 
 
     for (field of ['to', 'cc', 'bcc']) {
-        for (let k = 0; k < composeDetails.to.length; k++, K++) {
+        for (let k = 0; k < composeDetails[field].length; k++, K++) {
             let dest = composeDetails[field][k];
             // contact can either be a string (entered by user) or an object (from address book)
             if (typeof dest === 'string') {
