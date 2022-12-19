@@ -1,6 +1,6 @@
 # ContactFinder
  
-ContactFinder is an add-on allowing you to autocomplete a list of contact when sending a message by searching their name in the address book.
+ContactFinder is a Thunderbird add-on allowing you to autocomplete a list of contact when sending a message by searching their name in the address book.
 
 https://addons.thunderbird.net/en-US/thunderbird/addon/contact-finder
 
